@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-UP.....</title>
+    <style>
+      *{
+         box-sizing: border-box;
+         padding: 0;
+         margin: 0;
+     }
+     body{
+         margin-bottom: 1000px;
+         }
+
+  .container1{
+              background: #fff;
+              padding: 40px;
+              max-width: 85%;
+              margin: auto;
+              -webkit-box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+              box-shadow: 0 15px 30px 0 rgba(0, 0, 0, 0.2);
+           }
+  .form-control {
+                   border: none;
+                   border-radius: 10px;
+                   padding-inline: 10px;
+                   height: 54px;
+                   width: 400x;
+                   background: #efefef;
+                }
+       
+     .nav{
+         text-align: center;
+         background-color: rgb(63, 106, 186);
+         padding-top: 5px;
+         padding-bottom: 5px;
+     }
+     .logo{
+ 
+        position: relative; left: 40px;
+     }
+     .logo1{
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        font-size: large;
+        font-weight: 300;
+        color:rgb(44, 83, 190);
+        position: relative; left: 60px;
+   }
+   .text{
+       font-size: medium; font-family: sans-serif;
+       text-indent: 30px;
+       color: rgb(29, 29, 177);
+       font-weight: 300;
+       word-spacing: 20px;
+   }
+   .center{
+       position: absolute;
+       top: 80%;
+       left: 50%;
+       transform: translate(-50%, -50%);
+       width: 600px;
+       background: white;
+       border-radius: 10px;
+   }
+   .center h1{
+       text-align: center;
+       padding: 0 0 20px 0;
+       border-bottom: 1px solid silver;
+   }
+   .center form{
+       padding: 0 40px;
+       box-sizing: border-box;
+     
+   }
+   form .txt-fld{
+     position: relative;
+     border-bottom: 2px solid #adadad;
+     margin: 30px 0;
+   }
+      .txt-fld input{
+       width: 100%;
+       padding: 0 5px;
+       height: 40px;
+       font-size: 16px;
+       border: none;
+       background: none;
+       outline: none;
+     }
+     .txt-fld label{
+         position: absolute;
+         top: 50%;
+         left: 5px;
+         color: #adadad;
+         transform: translateY(-50%);
+         font-size: 16px;
+         pointer-events: none;
+         transition: .5s;
+     }
+      .txt-fld span::before{
+         content: '';
+         position: absolute;
+         top: 40px;
+         left: 0;
+         width: 0%;
+         height: 2px;
+         background: #2691d9;
+         transition: .5s;
+     }
+     .txt-fld input:focus ~ label,
+     .txt-fld input:valid ~ label{
+         top: -5px;
+         color: #2691d9;
+
+     } 
+     .txt-fld input:focus ~ span::before,
+     .txt-fld input:valid ~ span::before{
+         width: 100%;
+
+     }
+     .pass{
+         margin: -5px 0 20px 5px;
+         color: #a6a6a6;
+         cursor: pointer;
+     }
+     .pass:hover{
+         text-decoration: underline;
+     }
+     input[type="submit"]
+     {
+         width: 100%;
+         height: 50px;
+         border: 1px solid;
+         background: #2691d9;
+         border-radius: 20px;
+         font-size: 18px;
+         color: #e9f4fb;
+         font-weight: 700;
+         cursor: pointer;
+         outline: none;            
+     }
+     input[type="submit"]:hover
+     {
+         border-color: #2691d9;
+         transition: .5s;
+     }
+ </style>
+</head>
+<body>
+
+
+    <div class="nav"><h1>Organ Donation Campaign</h1>
+    </div>
+    <div class="logo" width="100px"><img src="Img/lo3.jpg" alt="img"></div>
+    
+    <div class="logo1"><left><hr width="190px">organdonarcamp.gov<hr width="190px" ></div>
+    <br>
+    <!--
+       <div class=" half">
+        <div class="contents">
+       <form>  
+      
+    <div class="container1">
+      <h3>SignUp Form of <strong>Organ Donor</strong></h3><br>
+      <div class="form-block">
+                                
+        <div>
+                  <label>Name<span>*</span> ( As it appears on government issued identity card )</label><br>
+
+                  <input type="text" class="form-control"  name="fristName" id="fristName" value="" size="40" maxlength="100" class="required" aria-required="true" Placeholder="Enter Full Name" onkeypress="return onlyAlphabets(this)">
+                  
+        </div>
+            
+        
+
+         <div>
+                    <br><label>Current Residential Address<span>*</span></label>&emsp;&emsp;&emsp;&ensp;<label>Permanent Residential Address<span>*</span></label><br>
+                    <textarea name="address"class="form-control" id="address" maxlength="80"class="required" Placeholder="House Number/Flat Number, Society Name"></textarea>&emsp;&emsp;&emsp;&emsp;
+                    <textarea name="address"class="form-control" id="address" maxlength="80"class="required" Placeholder="House Number/Flat Number, Society Name"></textarea>
+                    &emsp;&emsp;&emsp;
+        </div>
+                   
+              <div>
+                      <br><label>City<span>*</span></label>&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+                      <label>District<span>*</span></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp; 
+                      <label>State<span>*</span></label><br>
+                      <input type="text"class="form-control" name="city" id="city" value="" size="30" maxlength="100" class="required" Placeholder="City" onkeypress="return onlyAlphabets(this)" />
+                      &emsp;&emsp; 
+                      <input type="text"class="form-control" name="distric" id="distric" value="" size="30" maxlength="50" class="required" Placeholder="District" onkeypress="return onlyAlphabets(this)" />  
+                      &emsp;&emsp;                            
+                      <input type="text"class="form-control" name="state" id="state" value="" size="40" maxlength="50" class="required" aria-required="true" Placeholder="State" onkeypress="return onlyAlphabets(this)" />
+              </div>
+
+              <div>
+                <br><label>PIN Code<span>*</span></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;  
+                 <label>Mobile Number<span>*</span></label><label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+                  Occupation<span>*</span></label><br>
+                <input type="text" Placeholder="PIN Code" class="form-control" name="zip_code" id="zip_code" value="" size="40" maxlength="6" class="required" aria-required="true" onkeypress="return isNumber(event)">
+                &emsp;&emsp; 
+                <input type="text" Placeholder="Mobile Number" class="form-control"name="mobile_no" id="mobile_no" value="" size="40" maxlength="10" class="required" aria-required="true" onkeypress="return isNumber(event)"> 
+                &emsp;&emsp; 
+
+               <select types="select" class="form-control" class="selects required" name="workplace" id="workplace">
+                       <option value="">--- Select ---</option>
+                       <option value="Student">Student</option>
+                       <option value="Business">Business</option>
+                       <option value="Professional">Professional</option>
+                       <option value="Self Employed">Self Employed</option>
+                       <option value="Government employee">Government Employee</option>
+                       <option value="Armed forces">Armed Forces</option>
+                       <option value="Retired">Retired</option>
+                       <option value="Home maker">Homemaker</option>
+                       <option value="Other">Other</option>
+               </select>
+          </div>
+
+          <div>
+               <br><label>Email<span>*</span></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+               <label>Date Of Birth<span>*</span></label>&ensp;&emsp;&emsp;&emsp;&emsp;
+               <label>Gender<span>*</span></label>&emsp;&emsp;&emsp;&emsp;&emsp;
+                <label>Blood Group<span>*</span></label><br>
+               <input type="text"class="form-control" name="es_email_mail" id="es_email_mail" value="" size="40" class="required error" maxlength="150" aria-required="true" Placeholder="Email">
+               &emsp;&emsp;
+               <input type="date" name="DateofBirth" class="form-control" id="DateofBirth" value="" size="40" class="required" maxlength="15" aria-required="true" Placeholder="DD/MM/YYYY" onkeypress="return checkDate(event)" >
+               &emsp;&emsp;
+        
+                     <select types="select"  class="form-control" class="selects required" id="gender" name="gender">
+                         <option value="">---Select---</option>
+                         <option value="MALE">Male</option>
+                         <option value="FEMALE">Female</option>
+                         <option value="Other">Other</option>
+                     </select>&emsp;&emsp;
+             
+               <select types="select"  class="form-control" class="selects required" name="blood_group" id="blood_group">
+                 <option value="">---Select---</option>
+                 <option value="A+">A<sup>+</sup></option>
+                 <option value="A-">A<sup>-</sup></option>
+                 <option value="B+">B<sup>+</sup></option>
+                 <option value="B-">B<sup>-</sup></option>
+                 <option value="AB+">AB<sup>+</sup></option>
+                 <option value="AB-">AB<sup>-</sup></option>
+                 <option value="O+">O<sup>+</sup></option>
+                 <option value="O-">O<sup>-</sup></option>
+               </select>
+          </div>
+
+          <div>
+             <br><label>Guardian Contact Number.<span>*</span>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          
+            <label> Enter Aadhar Card Number<span>*</span></label><br>
+            <input type="text" name="kins_phone_no"  class="form-control" id="kins_phone_no" Placeholder="Enter Emergency Contact Number" title="Enter Emergency Contact Number" value="" size="40" maxlength="10" class="required" aria-required="true" onkeypress="return isNumber(event)"> 
+            &emsp;&emsp;
+
+          <input type="text" name="aadhar" class="form-control"id="aadhar" size="40" maxlength="20" class="required identity" Placeholder="Enter No.">
+
+      </div>                
+      
+
+      <div class="col-md-12 donate_checkbox">
+        <br><label style="padding-top:20px;">Organs that I wish to donate :<span>*</span></label>
+              <div class="inline" style="position:relative" >
+                 
+                  <input type="checkbox"     name="organ_donate[]" value="Corneas" id="Corneas" class="donate-check donorform" />
+                  <label for="Corneas" class="labelwish">Corneas (Eyes)</label>&emsp;
+      
+                  <input type="checkbox"     name="organ_donate[]" value="Kidneys" id="Kidneys" class="donate-check donorform" />
+                  <label for="Kidneys" class="labelwish">Kidneys</label>&emsp;
+      
+                  <input type="checkbox"     name="organ_donate[]" value="Bone_Marrow" id="Bone_Marrow" class="donate-check donorform" />
+                  <label for="Heart"   class="labelwish">Bone Marrow</label>&emsp;
+      
+                  <input type="checkbox"     name="organ_donate[]" value="Lungs" id="Lungs" class="donate-check donorform" />
+                  <label for="Lungs"   class="labelwish">Lungs</label>&emsp;
+      
+                  <input type="checkbox"     name="organ_donate[]" value="Liver" id="Liver" class="donate-check donorform" />
+                  <label for="Liver"   class="labelwish">Liver</label>&emsp;
+      
+                  <input type="checkbox"  name="organ_donate[]" value="Pancreas" id="Pancreas" class="donate-check donorform" />
+                  <label for="Pancreas"class="labelwish">Pancreas</label>&emsp;
+      
+                  <input type="checkbox" name="organ_donate[]" value="Intestine" id="Intestine" class="donate-check donorform" />
+                  <label for="smallintestine" class="labelwish">Intestine </label>&emsp;
+      
+                  <input type="checkbox"name="organ_donate[]" value="Skin" id="Skin" class="donate-check donorform" />
+                  <label for="Skin" class="labelwish">Skin</label>&emsp;
+      
+                  <input type="checkbox"name="organ_donate[]" value="Body_Tissues" id="Body_Tissues" class="donate-check donorform" />
+                  <label for="Skin" class="labelwish">Body Tissues</label>&emsp;
+              </div>
+   
+       </div>     <br><br>     
+                <div>
+                  
+                       <input type="Submit" value="SignUp" class="btn" >
+                  
+                </div>  
+              </form>
+           
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  </div>
+
+<br><br><br><br><br>-->
+
+  <div class="container1">
+  
+  <!-- <h3>SignUp Form of <strong>Organ Seeker</strong></h3><br>
+      <div class="form-block">    
+       
+
+        <div>
+          <label>Name<span>*</span> ( As it appears on government issued identity card )</label><br>
+
+          <input type="text" class="form-control"  name="fristName" id="fristName" value="" size="40" maxlength="100" class="required" aria-required="true" Placeholder="Enter Full Name" onkeypress="return onlyAlphabets(this)">
+          
+        </div>
+            <br>
+
+        <div>
+          <label>Blood Group<span>*</span></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+          <label>Organ<span>*</span></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&ensp;
+          <label>Date Of Birth<span>*</span></label>&ensp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <label>Gender<span>*</span></label>&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+          <br>
+          <select types="select"  class="form-control" class="selects required" name="blood_group" id="blood_group">
+            <option value="">---Select---</option>
+            <option value="A+">A<sup>+</sup></option>
+            <option value="A-">A<sup>-</sup></option>
+            <option value="B+">B<sup>+</sup></option>
+            <option value="B-">B<sup>-</sup></option>
+            <option value="AB+">AB<sup>+</sup></option>
+            <option value="AB-">AB<sup>-</sup></option>
+            <option value="O+">O<sup>+</sup></option>
+            <option value="O-">O<sup>-</sup></option>
+          </select>
+
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+          <select types="select"  class="form-control" class="selects required" name="organ" id="blood_group">
+            <option value="">---Select---</option>
+            <option value="Corneas_eyes">Corneas (Eyes)</option>
+            <option value="Kidneys">Kidneys</option>
+            <option value="Bone_Marrow">Bone Marrow</option>
+            <option value="Lungs">Lungs</option>
+            <option value="Liver">Liver</option>
+            <option value="Pancreas">Pancreas</option>
+            <option value="Intestine">Intestine</option>
+            <option value="Skin">Skin</option>
+            <option value="Body_Tissues">Body Tissues</option>
+          </select>
+
+          &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+
+               <input type="date" name="DateofBirth" class="form-control" id="DateofBirth" value="" size="40" class="required" maxlength="15" aria-required="true" Placeholder="DD/MM/YYYY" onkeypress="return checkDate(event)" >
+               
+
+               &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;
+        
+                     <select types="select"  class="form-control" class="selects required" id="gender" name="gender">
+                         <option value="">---Select---</option>
+                         <option value="MALE">Male</option>
+                         <option value="FEMALE">Female</option>
+                         <option value="Other">Other</option>
+                     </select>
+                      <br><br><br>
+                     <label><h4>Upload Medical documents</h4></label><br>
+                     <input type="file" name="myfile" id="" value="Upload file"><br><br>
+
+                     <input type="submit" value="Submit"> -->
+                     <table border="2px sloid black">
+                       <tr>
+                            <th>Name</th>
+                            <th>Blood Group</th>
+                            <th>Organ</th>
+                       </tr>
+                     </table>
+        </div>
+
+      </div>
+  </div>
+   </body>
+</html>
