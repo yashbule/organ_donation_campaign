@@ -1,3 +1,3 @@
 # organ_donation_campaign
-Author - Yash BUle<br>
+Author - Yash Bule<br>
 This is my First Git Repository on GITHUB , this project based on core PHP. 
